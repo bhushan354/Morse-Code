@@ -62,5 +62,10 @@ def string_decode(word)
   decoded_chars.join
 end
 
-# decoded_string = string_decode('-- -.--')
-# puts decoded_string
+def sentence_decode(message)
+  decoded_words = message.split('   ').map{|word| string_decode(word)}
+  decoded_words.join(' ')
+end
+
+# result = sentence_decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+# puts result
